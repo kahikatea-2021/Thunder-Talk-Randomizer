@@ -1,3 +1,5 @@
+🥁
+
 This is an app designed to randomise the running order of students for Thunder Talks, or similar situations.
 
 To run the randomiser:
