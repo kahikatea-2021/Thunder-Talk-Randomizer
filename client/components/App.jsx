@@ -5,7 +5,7 @@ import { createRandomList, noDuplicates } from './appHelper'
 import Header from './Header'
 
 function App (props) {
-  const [humans, setHumans] = useState(['Jared', 'Sam', 'Ulysses'])
+  const [humans, setHumans] = useState([])
   const [list, setList] = useState([])
   const [formEntry, setFormEntry] = useState([])
 
