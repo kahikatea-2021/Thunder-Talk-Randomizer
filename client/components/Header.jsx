@@ -4,7 +4,7 @@ function Header () {
   return (
     <>
       <div className='header'>
-        <h1>Jared and Sam's Astonishing Human Randomizer Machine</h1>
+        <h1>Thundomiser</h1>
       </div>
     </>
   )

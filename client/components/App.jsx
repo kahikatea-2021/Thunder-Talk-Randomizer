@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { createRandomList, noDuplicates } from './appHelper'
 
 import Header from './Header'
+import Footer from './Footer'
 
 function App (props) {
   const [humans, setHumans] = useState([])
@@ -74,6 +75,7 @@ function App (props) {
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     </>
   )
