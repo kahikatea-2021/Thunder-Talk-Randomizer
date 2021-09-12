@@ -9,11 +9,15 @@ import Form from './Form'
 function App (props) {
   return (
     <>
-      <div className='app-container'>
-        <Route path='/' component={Header} />
-        <Route exact path='/' component={Form} />
-        <Route path='/random' component={RandomisedList} />
-        <Route path='/' component={Footer} />
+      <div className='main-container'>
+        <div className='grid-container'>
+          <div className='filler-left'></div>
+          <Route path='/' component={Header} />
+          <Route exact path='/' component={Form} />
+          <Route path='/random' component={RandomisedList} />
+          <Route path='/' component={Footer} />
+          <div className='filler-right'></div>
+        </div>
       </div>
     </>
   )

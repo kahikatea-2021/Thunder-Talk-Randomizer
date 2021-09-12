@@ -10,6 +10,7 @@ body {
 
 h1 {
   color: $primary-color;
+  margin: 0px;
 }
 
 ul {
@@ -20,6 +21,10 @@ ul {
 li {
   list-style-type: none;
   line-height: 28px;
+}
+
+a {
+  text-decoration: none;
 }
 
 label {
@@ -35,6 +40,18 @@ button {
   font-weight: bold;
   cursor: pointer;
   margin-right: 0.4rem;
+}
+
+.main-container {
+  height: 100vh;
+  width: 100vw;
+}
+
+.grid-container{
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 650px 1fr;
+  grid-template-rows: 157px 1fr 51px;
 }
 
 .submit-button {
@@ -55,8 +72,9 @@ button {
 .randomise-button {
   border-radius: 8px;
   padding: 0.4rem 0.8rem;
-  background-color: rgb(0, 132, 255);
+  background-color: lightgray;
   font-weight: normal;
+  border: 2px solid black;
 }
 
 .randomise-button:hover {
@@ -71,11 +89,13 @@ button {
 }
 
 .app-container {
+  grid-column-start: 2;
   display: flex;
   flex-direction: column;
 }
 
 .header {
+  grid-column-start: 2;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -88,22 +108,64 @@ button {
   }
 }
 
+.footer{
+  grid-column-start: 2;
+  grid-row-start: 3;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  p {
+    margin: 1em;
+  }
+}
+
+// .body-container {
+//   display: flex;
+//   justify-content: space-around;
+//   // width: 100%;
+// }
+
+// .list-container {
+//   grid-column-start: 2;
+//   display: flex;
+//   flex-direction: column;
+//   // flex-grow: 1;
+//   padding-right: 4rem;
+//   padding-left: 4rem;
+// }
+
 .body-container {
-  display: flex;
-  justify-content: space-around;
-  // width: 100%;
-}
-
-.list-container {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  padding-left: 6rem;
-}
-
-.randomiser-container {
+  margin-left: 4em;
+  margin-right: 4em;
+  margin-bottom: 1px;
+  height: 100%;
+  border-radius: 1em;
+  grid-column-start: 2;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
-  padding-right: 6rem;
+  // flex-grow: 1;
+  padding-right: 4rem;
+  padding-left: 4rem;
+  text-align: center;
+}
+
+.submit {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2em;
+  justify-content: space-between;
+}
+
+.filler-left {
+  background-image: linear-gradient(to right, black, white);
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+
+.filler-right {
+  background-image: linear-gradient(to right, white, black);
+  grid-column-start: 3;
+  grid-row-start: 1;
+  grid-row-end: 4;
 }
