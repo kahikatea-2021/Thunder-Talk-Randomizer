@@ -35,7 +35,7 @@ function Form (props) {
 
   return (
     <>
-      <div className='list-container'>
+      <div className='body-container'>
         <div className='list-form'>
           <form onSubmit={handleSubmit}>
             <label>Add a name:</label>
@@ -44,12 +44,14 @@ function Form (props) {
           </form>
         </div>
         <div className='list-names'>
-          <h1>List of Humans</h1>
-          <Link
-            to={{
-              pathname: '/random',
-              state: { list: humans }
-            }}>Submit List</Link>
+          <div className='submit'>
+            <h1>List of Humans</h1>
+            <button className='randomise-button'><Link
+              to={{
+                pathname: '/random',
+                state: { list: humans }
+              }}>Randomize!</Link></button>
+          </div>
           <ul>
             {humans.map(human => (
               <><li key={human}><button className={human} onClick={handleDelete}>x</button>  {human}</li></>

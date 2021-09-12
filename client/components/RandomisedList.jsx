@@ -6,7 +6,7 @@ function RandomisedList (props) {
   const list = createRandomList(props.location.state.list)
   return (
     <>
-      <div>
+      <div className='body-container'>
         <h1>Random Humans</h1>
         <ul>
           {list.map(person => (
